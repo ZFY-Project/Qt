@@ -8,9 +8,11 @@ CONFIG += c++17
 
 SOURCES += \
     src/main.cpp \
+    src/protocol/crc16.cpp \
     src/ui/mainwindow.cpp
 
 HEADERS += \
+    src/protocol/crc16.h \
     src/ui/mainwindow.h
 
 FORMS += \
