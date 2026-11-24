@@ -37,7 +37,8 @@ quint16 Crc16::compute(const QByteArray& data)
         buildTable();
     }
     quint16 crc=0xFFFF;
-    for (int i = 0; i < data.size(); ++i) {
+    for (int i = 0; i < data.size(); ++i)
+    {
         const quint8 b = static_cast<quint8>(data.at(i));  // char 转 quint8，防负数
         const quint16 idx = (crc ^ b) & 0xFF;
         crc = static_cast<quint16>((crc >> 8) ^ table[idx]);
